@@ -1,0 +1,71 @@
+   // Response.Write(Calendar1.TodaysDate.ToShortDateString());     
+        // Response.Write(Calendar1.SelectedDate.ToShortDateString()); // 10/12/2018 
+        // Response.Write(Calendar1.SelectedDate.ToLongDateString());  //Friday, October 12, 2018 
+        // Response.Write(DateTime.Now.ToShortTimeString());  // 11:43 AM
+        // Response.Write(DateTime.Now.ToLongTimeString()); // 11:45:45 AM 
+        // Response.Write(DateTime.Now.ToLongDateString()); // Friday, October 12, 2018 
+        // Response.Write(DateTime.Now.ToShortDateString()); // Friday, October 12, 2018 
+        // Calendar1.TodaysDate = new DateTime(2018, 2, 28);  // calendar date set (re-module)
+
+        DateTime dt;
+        dt = DateTime.Now;
+
+        //Response.Write(dt);  // 10/12/2018 11:55:54 AM 
+
+          
+        //*********************** date to String ====================================
+
+         String datim = dt.ToString("dd/MM/yyyy hh:mm:ss tt");     // date(2) month(2) year(4)   12/10/2018
+        // String datim = dt.ToString("dd/MMM/yyyy");     // date(2) month(3) year(4)    12/Oct/2018
+        //String datim = dt.ToString("hh:mm:ss tt");     //  hh 12 hrs tt: am/pm               12:02:48 PM
+                                                        //HH 24 hrs
+        //=======================string to date =====================================
+
+         dt = Convert.ToDateTime(datim);
+
+        Response.Write(dt);
+        
+        //============================================================================================
+        d -> Represents the day of the month as a number from 1 through 31. 
+
+dd -> Represents the day of the month as a number from 01 through 31. 
+
+ddd-> Represents the abbreviated name of the day (Mon, Tues, Wed etc).
+
+dddd-> Represents the full name of the day (Monday, Tuesday etc).
+
+h 12-hour clock hour (e.g. 4).
+
+hh 12-hour clock, with a leading 0 (e.g. 06)
+
+H 24-hour clock hour (e.g. 15)
+
+HH 24-hour clock hour, with a leading 0 (e.g. 22)
+
+m Minutes
+
+mm Minutes with a leading zero
+
+M Month number(eg.3)
+
+MM Month number with leading zero(eg.04)
+
+MMM Abbreviated Month Name (e.g. Dec)
+
+MMMM Full month name (e.g. December)
+
+s Seconds
+
+ss Seconds with leading zero
+
+t Abbreviated AM / PM (e.g. A or P)
+
+tt AM / PM (e.g. AM or PM
+
+y Year, no leading zero (e.g. 2015 would be 15)
+
+yy Year, leadin zero (e.g. 2015 would be 015)
+
+yyy Year, (e.g. 2015)
+
+yyyy Year, (e.g. 2015)
