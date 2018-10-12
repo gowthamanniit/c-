@@ -1,0 +1,23 @@
+ protected void Button1_Click(object sender, EventArgs e)  // insert to checkboxlist
+    {
+        CheckBoxList1.Items.Clear();
+        CheckBoxList1.Items.Add("c");
+        CheckBoxList1.Items.Add("c++");
+        CheckBoxList1.Items.Add("java");
+        CheckBoxList1.Items.Add("vb");
+        CheckBoxList1.Items.Add("sql");
+        CheckBoxList1.Items.Add("php");
+        CheckBoxList1.Items.Add("c#");
+
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        ListBox1.Items.Clear();
+        int len = CheckBoxList1.Items.Count;
+        //Response.Write("<script>alert('total"+len+"');</script>");
+
+        for (int i = 0; i < len; i++)
+        {
+            if (CheckBoxList1.Items[i].Selected == true)
+                ListBox1.Items.Add(CheckBoxList1.Items[i].Text);
+        }
