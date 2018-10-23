@@ -1,0 +1,26 @@
+placeholder use: to add Runtime tools
+literal use: to add html code.
+
+public partial class randomimage : System.Web.UI.Page
+{
+    TextBox tb1;
+    Label lb1;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        tb1=new TextBox();
+        lb1 = new Label();
+        lb1.Text = "<br><pre>                                          Enter Your Name";   
+                      
+        tb1.Width=200;
+        tb1.Text="Anguraj";
+
+        Literal1.Text = "</pre>";
+        PlaceHolder1.Controls.Add(lb1);
+        PlaceHolder1.Controls.Add(tb1);
+        PlaceHolder1.Controls.Add(Literal1);       
+    }
+}
